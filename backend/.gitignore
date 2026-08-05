@@ -1,0 +1,15 @@
+# environments
+venv/
+.venv/
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.pyo
+*.pyd
+
+# uv
+.uv/
