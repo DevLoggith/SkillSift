@@ -1,0 +1,37 @@
+# UV
+[project]
+name = "backend"
+version = "0.1.0"
+requires-python = ">=3.14"
+dependencies = [
+    "alembic>=1.19.1",
+    "fastapi[standard]>=0.141.1",
+    "sqlalchemy>=2.0.51",
+    "uvicorn>=0.52.1",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.16.2",
+]
+
+
+# Ruff
+[tool.ruff]
+src = ["backend"]
+line-length = 100
+
+[tool.ruff.lint]
+select = [
+    "E", # pycodestyle errors
+    "W", # pycodestyle warnings
+    "F", # pyflakes
+    "I", # isort
+    "N", # pep8-naming
+    "UP" # pyupgrade
+]
+ignore = ["E501"]  # Line too long (handled by formatter)
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space" # default = 4 spaces
