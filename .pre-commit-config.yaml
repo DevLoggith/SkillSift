@@ -20,7 +20,7 @@ repos:
       - id: ruff-check
         name: ruff check (backend)
         entry: uv run ruff check
-        args: [--fix, --exit-non-zero-on-fix]
+        args: [--fix, --exit-non-zero-on-fix, --cache-dir, backend/.ruff_cache]
         language: system
         types: [python]
         files: ^backend/
@@ -28,6 +28,7 @@ repos:
       - id: ruff-format
         name: ruff format (backend)
         entry: uv run --project backend ruff format
+        args: [--cache-dir, backend/.ruff_cache]
         language: system
         types: [python]
         files: ^backend/

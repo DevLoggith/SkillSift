@@ -13,3 +13,6 @@ __pycache__/
 
 # uv
 .uv/
+
+# Ruff
+.ruff_cache/
