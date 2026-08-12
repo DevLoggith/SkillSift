@@ -7,8 +7,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
-    "lint": "biome check .",
-    "lint:fix": "biome check --write ."
+    "lint": "pre-commit run --files $(git ls-files .)",
+    "lint:all": "pre-commit run --all-files"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.3",
